@@ -1,8 +1,6 @@
 package utils
 
-import (
-	"sort"
-)
+import "sort"
 
 type sortRunes []rune
 
@@ -18,7 +16,7 @@ func (s sortRunes) Len() int {
 	return len(s)
 }
 
-// SortString sorts a returns sorted string
+// SortString sorts the given string and returned the sorted one
 func SortString(s string) string {
 	r := []rune(s)
 	sort.Sort(sortRunes(r))
