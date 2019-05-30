@@ -1,8 +1,4 @@
-package main
-
-func main()  {
-	
-}
+package twosum
 
 func twoSum(nums []int, target int) []int {
     l := len(nums)
