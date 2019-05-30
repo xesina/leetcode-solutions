@@ -1,6 +1,26 @@
 package permutations
 
+import (
+	"fmt"
+)
+
 // https://leetcode.com/problems/permutations
+
+func heapPermutation(a []int, size int) {
+	if size == 1 {
+		fmt.Println(a)
+	}
+
+	for i := 0; i < size; i++ {
+		heapPermutation(a, size-1)
+
+		if size%2 == 1 {
+			a[0], a[size-1] = a[size-1], a[0]
+		} else {
+			a[i], a[size-1] = a[size-1], a[i]
+		}
+	}
+}
 
 func permute(nums []int) [][]int {
 	n := len(nums)
